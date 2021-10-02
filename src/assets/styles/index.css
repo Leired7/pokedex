@@ -8,11 +8,13 @@
   --space-large: 48px;
 
   --font-family: 'Poppins', sans-serif;
-  --font-size-tiny: 8px;
-  --line-height-tiny: 12px;
-  --font-size-small: 10px;
+  --font-size-xtiny: 8px;
+  --line-height-xtiny: 12px;
+  --font-size-tiny: 10px;
+  --line-height-tiny: 16px;
+  --font-size-small: 12px;
   --line-height-small: 16px;
-  --font-size-medium: 12px;
+  --font-size-medium: 14px;
   --line-height-medium: 16px;
   --font-size-big: 24px;
   --line-height-big: 32px;
@@ -21,11 +23,12 @@
   --bold-font-weight: 700;
 
   --color-grass: #74cb48;
+  --color-poison: #a43e9e;
 
   --color-white: #ffffff;
 
   --color-grey-dark: #212121;
-  --color-gray-medium: #666666;
+  --color-grey-medium: #666666;
   --color-grey-light: #e0e0e0;
   --color-grey-background: #f7f7f7;
 }
