@@ -31,6 +31,8 @@
   --color-grey-medium: #666666;
   --color-grey-light: #e0e0e0;
   --color-grey-background: #f7f7f7;
+
+  --box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 *,
