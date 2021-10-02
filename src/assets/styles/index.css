@@ -1,0 +1,45 @@
+:root {
+  --space-xtiny: 4px;
+  --space-tiny: 8px;
+  --space-small: 12px;
+  --space-mini: 16px;
+  --space-base: 24px;
+  --space-medium: 32px;
+  --space-large: 48px;
+
+  --font-family: 'Poppins', sans-serif;
+  --font-size-tiny: 8px;
+  --line-height-tiny: 12px;
+  --font-size-small: 10px;
+  --line-height-small: 16px;
+  --font-size-medium: 12px;
+  --line-height-medium: 16px;
+  --font-size-big: 24px;
+  --line-height-big: 32px;
+
+  --regular-font-weight: 400;
+  --bold-font-weight: 700;
+
+  --color-grass: #74cb48;
+
+  --color-white: #ffffff;
+
+  --color-grey-dark: #212121;
+  --color-gray-medium: #666666;
+  --color-grey-light: #e0e0e0;
+  --color-grey-background: #f7f7f7;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
