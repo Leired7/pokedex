@@ -44,6 +44,7 @@
 body {
   margin: 0;
   font-family: var(--font-family);
+  background-color: var(--color-grey-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
