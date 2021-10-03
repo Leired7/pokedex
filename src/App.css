@@ -1,4 +1,4 @@
-.poke-card {
+.card {
   position: relative;
 
   display: flex;
@@ -16,36 +16,35 @@
   box-shadow: var(--box-shadow);
 }
 
-.card-header {
+.card__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.card-title,
-.card-id {
+.color-white {
   color: var(--color-white);
 }
 
-.card-title {
+.card__title {
   font-size: var(--font-size-big);
   line-height: var(--line-height-big);
   font-weight: var(--bold-font-weight);
 }
 
-.card-id {
+.card__id {
   font-size: var(--font-size-medium);
   line-height: var(--font-size-big);
   font-weight: var(--bold-font-weight);
 }
 
-.card-image {
+.card__image {
   position: relative;
   z-index: 1;
   margin: 0 auto;
 }
 
-.card-description {
+.card__description {
   position: relative;
   margin-top: -60px;
 
@@ -63,7 +62,7 @@
   max-height: 240px;
 }
 
-.card-tag-list {
+.card__list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,26 +88,26 @@
   width: fit-content;
 }
 
-.bg-grass {
+.background-color-grass {
   background-color: var(--color-grass);
 }
 
-.bg-poison {
+.background-color-poison {
   background-color: var(--color-poison);
 }
 
-.c-grass {
+.color-grass {
   color: var(--color-grass);
 }
 
-.card-about {
+.card__about {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.card-about-title {
+.card__about-title {
   font-size: var(--font-size-medium);
   line-height: var(--line-height-medium);
   font-weight: var(--bold-font-weight);
@@ -116,7 +115,7 @@
   text-align: center;
 }
 
-.card-icons {
+.card__icons {
   display: flex;
   justify-content: center;
 
@@ -124,27 +123,27 @@
   margin-right: -24px;
 }
 
-.icon-wrapper {
+.data__wrapper {
   padding: 5px var(--space-base);
 }
 
-.icon-wrapper + .icon-wrapper {
+.data__wrapper + .data__wrapper {
   border-left: 1px solid var(--color-grey-light);
 }
 
-.icon-text {
+.data__text {
   display: flex;
   gap: var(--space-tiny);
   margin-bottom: var(--space-small);
 }
 
-.type-number {
+.data__number {
   font-size: var(--font-size-tiny);
   line-height: var(--line-height-tiny);
   color: var(--color-grey-dark);
 }
 
-.type {
+.data__type {
   display: block;
   font-size: var(--font-size-xtiny);
   line-height: var(--line-height-xtiny);
@@ -152,7 +151,7 @@
   text-align: center;
 }
 
-.pokemon-description {
+.about__description {
   font-size: var(--font-size-tiny);
   line-height: var(--line-height-tiny);
   font-weight: var(--font-weight-regular);
