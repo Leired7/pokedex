@@ -165,3 +165,39 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+.poke-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 74px;
+  box-shadow: var(--box-shadow);
+}
+
+.poke-nav-link {
+  /* Reset <a> styles */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  font-size: var(--font-size-big);
+  line-height: var(--line-height-big);
+  font-weight: var(--bold-font-weight);
+
+  color: var(--color-grey-dark);
+}
+
+.icon-pokeball {
+  margin-right: var(--space-base);
+}
+
+@media screen and (min-width: 768px) {
+  .poke-nav-header {
+    justify-content: flex-start;
+  }
+
+  .poke-nav-link {
+    margin-left: 135px;
+  }
+}

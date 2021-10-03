@@ -2,40 +2,50 @@ import './App.css';
 import Bulbasaur from './assets/img/bulbasaur.png';
 import iconHeight from './assets/icons/icon-height.svg';
 import iconWeight from './assets/icons/icon-weight.svg';
+import iconPokeBall from './assets/icons/icon-pokeball.svg';
 
 function App() {
   return (
     <div className="App">
-      <article class="card">
-        <header class="card__header">
-          <h2 class="card__title color-white">Bulbasaur</h2>
-          <p class="card__id color-white">#001</p>
+      <header class="poke-nav-header">
+        <nav>
+          <a href="#" class="poke-nav-link">
+            <img src={iconPokeBall} alt="Bola pokedex" class="icon-pokeball" />
+            My Pokédex
+          </a>
+        </nav>
+      </header>
+
+      <article className="card">
+        <header className="card__header">
+          <h2 className="card__title color-white">Bulbasaur</h2>
+          <p className="card__id color-white">#001</p>
         </header>
-        <img src={Bulbasaur} alt="" class="card__image" />
-        <div class="card__description">
-          <ul class="card__list">
-            <li class="card-tag tag background-color-grass">Grass</li>
-            <li class="card-tag tag background-color-poison">Poison</li>
+        <img src={Bulbasaur} alt="" className="card__image" />
+        <div className="card__description">
+          <ul className="card__list">
+            <li className="card-tag tag background-color-grass">Grass</li>
+            <li className="card-tag tag background-color-poison">Poison</li>
           </ul>
-          <div class="card__about">
-            <h3 class="card__about-title color-grass">About</h3>
-            <ul class="card__icons">
-              <li class="data__wrapper">
-                <p class="data__text">
+          <div className="card__about">
+            <h3 className="card__about-title color-grass">About</h3>
+            <ul className="card__icons">
+              <li className="data__wrapper">
+                <p className="data__text">
                   <img src={iconWeight} alt="Icono de una regla" />
-                  <span class="data__number">6,9 kg</span>
+                  <span className="data__number">6,9 kg</span>
                 </p>
-                <span class="data_type">Weight</span>
+                <span className="data_type">Weight</span>
               </li>
-              <li class="data__wrapper">
-                <p class="data__text">
+              <li className="data__wrapper">
+                <p className="data__text">
                   <img src={iconHeight} alt="Icono de una regla" />
-                  <span class="data__number">0,7 m</span>
+                  <span className="data__number">0,7 m</span>
                 </p>
-                <span class="data__type">Height</span>
+                <span className="data__type">Height</span>
               </li>
             </ul>
-            <p class="about__description truncate-overflow">
+            <p className="about__description truncate-overflow">
               There is a plant seed on its back right from the day this Pokémon
               is born. The seed slowly grows larger.
             </p>
