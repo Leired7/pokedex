@@ -2,6 +2,21 @@
 
 - [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) **Last updated: Sep 25, 2020**
 
+- [Inputs & CSS Pseudo Elements](https://www.scottohara.me/blog/2014/06/24/pseudo-element-input.html)
+
+**DON'T WORK**
+
+> ```css
+> .poke-searcher-wrapper::before {
+>   content: ' ';
+>   background-image: url(../src/assets/icons/icon-magnifying-glass.svg);
+>   width: 16px;
+>   height: 16px;
+> }
+> ```
+
+**USE BACKGROUND-IMAGE**
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -72,3 +87,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+```
+
+```

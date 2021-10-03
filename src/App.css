@@ -160,20 +160,41 @@
   margin-right: var(--space-base);
 }
 
-.poke-search {
-  border: 1px solid var(--color-grey-light);
-  border-radius: var(--space-tiny);
-
-  height: 35px;
+.search {
   max-width: 500px;
   margin: 0 auto;
 }
+.search__form {
+  position: relative;
 
-.poke-searcher-wrapper::before {
-  content: ' ';
-  background-image: url(../src/assets/icons/icon-magnifying-glass.svg);
-  width: 16px;
-  height: 16px;
+  display: flex;
+  align-items: center;
+  flex: 0 0 100%;
+  margin: 0;
+}
+
+.search__icon {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 24px;
+  flex-shrink: 0;
+}
+
+.search__input {
+  border: 1px solid var(--color-grey-light);
+
+  border-radius: var(--space-tiny);
+
+  height: 35px;
+  width: 100%;
+
+  padding-left: 36px;
 }
 
 .tag {
