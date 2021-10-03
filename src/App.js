@@ -25,7 +25,7 @@ function App() {
       </header>
       <div class="card__searcher">
         <form>
-          <label htmlFor="pokemonName" class="screen-reader-only">
+          <label htmlFor={'pokemonName'} class="screen-reader-only">
             Search pokemon card
           </label>
           <input id="pokemonName" type="text" className="poke-search" />
@@ -50,7 +50,7 @@ function App() {
                   <img src={iconWeight} alt="Icono de una regla" />
                   <span className="data__number">6,9 kg</span>
                 </p>
-                <span className="data_type">Weight</span>
+                <span className="data__type">Weight</span>
               </li>
               <li className="data__wrapper">
                 <p className="data__text">
