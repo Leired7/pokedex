@@ -166,7 +166,7 @@
   overflow: hidden;
 }
 
-.poke-nav-header {
+.navigation__header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,7 +175,7 @@
   box-shadow: var(--box-shadow);
 }
 
-.poke-nav-link {
+.navigation__logo {
   /* Reset <a> styles */
   text-decoration: none;
   display: flex;
@@ -192,12 +192,17 @@
   margin-right: var(--space-base);
 }
 
+[href='#'],
+[alt=''] {
+  outline: 3px dashed tomato;
+}
+
 @media screen and (min-width: 768px) {
-  .poke-nav-header {
+  .navigation__header {
     justify-content: flex-start;
   }
 
-  .poke-nav-link {
+  .navigation__logo {
     margin-left: 135px;
   }
 }
