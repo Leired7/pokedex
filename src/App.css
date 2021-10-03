@@ -22,10 +22,6 @@
   justify-content: space-between;
 }
 
-.color-white {
-  color: var(--color-white);
-}
-
 .card__title {
   font-size: var(--font-size-big);
   line-height: var(--line-height-big);
@@ -77,27 +73,6 @@
 
 .card-tag + .card-tag {
   margin-left: var(--space-mini);
-}
-
-.tag {
-  font-size: var(--font-size-tiny);
-  line-height: var(--line-height-tiny);
-  font-weight: var(--bold-font-weight);
-  color: var(--color-white);
-
-  width: fit-content;
-}
-
-.background-color-grass {
-  background-color: var(--color-grass);
-}
-
-.background-color-poison {
-  background-color: var(--color-poison);
-}
-
-.color-grass {
-  color: var(--color-grass);
 }
 
 .card__about {
@@ -159,13 +134,6 @@
   text-align: justify;
 }
 
-.truncate-overflow {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
 .navigation__header {
   display: flex;
   align-items: center;
@@ -190,6 +158,63 @@
 
 .icon-pokeball {
   margin-right: var(--space-base);
+}
+
+.poke-search {
+  border: 1px solid var(--color-grey-light);
+  border-radius: var(--space-tiny);
+
+  height: 35px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.poke-searcher-wrapper::before {
+  content: ' ';
+  background-image: url(../src/assets/icons/icon-magnifying-glass.svg);
+  width: 16px;
+  height: 16px;
+}
+
+.tag {
+  font-size: var(--font-size-tiny);
+  line-height: var(--line-height-tiny);
+  font-weight: var(--bold-font-weight);
+  color: var(--color-white);
+
+  width: fit-content;
+}
+
+.truncate-overflow {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.color-white {
+  color: var(--color-white);
+}
+
+.background-color-grass {
+  background-color: var(--color-grass);
+}
+
+.background-color-poison {
+  background-color: var(--color-poison);
+}
+
+.color-grass {
+  color: var(--color-grass);
+}
+
+.screen-reader-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 [href='#'],

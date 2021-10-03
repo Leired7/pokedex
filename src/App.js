@@ -23,7 +23,14 @@ function App() {
           </a>
         </nav>
       </header>
-
+      <div class="card__searcher">
+        <form>
+          <label htmlFor="pokemonName" class="screen-reader-only">
+            Search pokemon card
+          </label>
+          <input id="pokemonName" type="text" className="poke-search" />
+        </form>
+      </div>
       <article className="card">
         <header className="card__header">
           <h2 className="card__title color-white">Bulbasaur</h2>
