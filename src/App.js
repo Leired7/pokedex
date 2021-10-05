@@ -23,7 +23,7 @@ function App() {
           </a>
         </nav>
       </header>
-      <div class="search">
+      <div class="search__container">
         <form className="search__form">
           <label htmlFor={'pokemonName'} class="screen-reader-only">
             Search pokemon card
@@ -47,42 +47,44 @@ function App() {
           <input id="pokemonName" type="text" className="search__input" />
         </form>
       </div>
-      <article className="card">
-        <header className="card__header">
-          <h2 className="card__title color-white">Bulbasaur</h2>
-          <p className="card__id color-white">#001</p>
-        </header>
-        <img src={Bulbasaur} alt="" className="card__image" />
-        <div className="card__description">
-          <ul className="card__list">
-            <li className="card-tag tag background-color-grass">Grass</li>
-            <li className="card-tag tag background-color-poison">Poison</li>
-          </ul>
-          <div className="card__about">
-            <h3 className="card__about-title color-grass">About</h3>
-            <ul className="card__icons">
-              <li className="data__wrapper">
-                <p className="data__text">
-                  <img src={iconWeight} alt="Icono de una regla" />
-                  <span className="data__number">6,9 kg</span>
-                </p>
-                <span className="data__type">Weight</span>
-              </li>
-              <li className="data__wrapper">
-                <p className="data__text">
-                  <img src={iconHeight} alt="Icono de una regla" />
-                  <span className="data__number">0,7 m</span>
-                </p>
-                <span className="data__type">Height</span>
-              </li>
+      <section className="section__container">
+        <article className="card">
+          <header className="card__header">
+            <h2 className="card__title color-white">Bulbasaur</h2>
+            <p className="card__id color-white">#001</p>
+          </header>
+          <img src={Bulbasaur} alt="" className="card__image" />
+          <div className="card__description">
+            <ul className="card__list">
+              <li className="card-tag tag background-color-grass">Grass</li>
+              <li className="card-tag tag background-color-poison">Poison</li>
             </ul>
-            <p className="about__description truncate-overflow">
-              There is a plant seed on its back right from the day this Pokémon
-              is born. The seed slowly grows larger.
-            </p>
+            <div className="card__about">
+              <h3 className="card__about-title color-grass">About</h3>
+              <ul className="card__icons">
+                <li className="data__wrapper">
+                  <p className="data__text">
+                    <img src={iconWeight} alt="Icono de una regla" />
+                    <span className="data__number">6,9 kg</span>
+                  </p>
+                  <span className="data__type">Weight</span>
+                </li>
+                <li className="data__wrapper">
+                  <p className="data__text">
+                    <img src={iconHeight} alt="Icono de una regla" />
+                    <span className="data__number">0,7 m</span>
+                  </p>
+                  <span className="data__type">Height</span>
+                </li>
+              </ul>
+              <p className="about__description truncate-overflow">
+                There is a plant seed on its back right from the day this
+                Pokémon is born. The seed slowly grows larger.
+              </p>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
+      </section>
     </div>
   );
 }

@@ -1,3 +1,7 @@
+.section__container {
+  padding: 0 24px 0 24px;
+}
+
 .card {
   position: relative;
 
@@ -5,7 +9,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  max-width: 300px;
+  width: 100%;
   min-height: 400px;
   max-height: 400px;
 
@@ -160,9 +164,9 @@
   margin-right: var(--space-base);
 }
 
-.search {
+.search__container {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 40px auto 55px;
 }
 .search__form {
   position: relative;
@@ -244,6 +248,15 @@
 }
 
 @media screen and (min-width: 768px) {
+  .section__container {
+    max-width: 990px;
+    margin: 0 auto;
+  }
+
+  .card {
+    max-width: 300px;
+  }
+
   .navigation__header {
     justify-content: flex-start;
   }
