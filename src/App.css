@@ -133,7 +133,7 @@
 .about__description {
   font-size: var(--font-size-tiny);
   line-height: var(--line-height-tiny);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--regular-font-weight);
   color: var(--color-grey-dark);
   text-align: justify;
 }
@@ -251,6 +251,8 @@
   .section__container {
     max-width: 990px;
     margin: 0 auto;
+
+    padding: 0;
   }
 
   .card {
