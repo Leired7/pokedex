@@ -15,7 +15,6 @@
 
   padding: var(--space-base) var(--space-small) 5px var(--space-base);
 
-  background-color: var(--color-grass);
   border-radius: var(--space-small);
   box-shadow: var(--box-shadow);
 }
@@ -221,12 +220,20 @@
   color: var(--color-white);
 }
 
+.color-electric {
+  color: var(--color-electric);
+}
+
 .background-color-grass {
   background-color: var(--color-grass);
 }
 
 .background-color-poison {
   background-color: var(--color-poison);
+}
+
+.background-color-electric {
+  background-color: var(--color-electric);
 }
 
 .color-grass {
