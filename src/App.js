@@ -59,9 +59,9 @@ function App() {
           </a>
         </nav>
       </header>
-      <div class="search__container">
+      <div className="search__container">
         <form className="search__form">
-          <label htmlFor={'pokemonName'} class="screen-reader-only">
+          <label htmlFor={'pokemonName'} className="screen-reader-only">
             Search pokemon card
           </label>
           <div class="search__icon">
@@ -84,16 +84,21 @@ function App() {
         </form>
       </div>
       <section className="section__container">
-        {pokeTest.map((pokeitem) => {
+        {pokeTest.map((pokeitem, index) => {
           return (
             <article
               className={`card background-color-${pokeitem.types[0].type.name}`}
+              key={index}
             >
               <header className="card__header">
                 <h2 className="card__title color-white">{pokeitem.name}</h2>
                 <p className="card__id color-white">#{pokeitem.id}</p>
               </header>
-              <img src={Bulbasaur} alt="" className="card__image" />
+              <img
+                src={Bulbasaur}
+                alt={`${pokeitem.name}`}
+                className="card__image"
+              />
               <div className="card__description">
                 <ul className="card__list">
                   {pokeitem.types.map((pokeTag) => {
