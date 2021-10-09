@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { Header } from './components/Header';
 import iconHeight from './assets/icons/icon-height.svg';
 import iconWeight from './assets/icons/icon-weight.svg';
-import iconPokeBall from './assets/icons/icon-pokeball.svg';
 import iconGithub from './assets/icons/icon-github.svg';
 import logoPokeapi from './assets/icons/logo-pokeapi.svg';
 
@@ -45,22 +45,7 @@ function App() {
 
   return (
     <main className="App">
-      <header className="navigation__header">
-        <nav>
-          <a
-            href="/"
-            className="navigation__logo"
-            title="Aún no tengo enlace. ¿Lo necesito?"
-          >
-            <img
-              src={iconPokeBall}
-              alt="Bola pokedex"
-              className="icon-pokeball"
-            />
-            My Pokédex
-          </a>
-        </nav>
-      </header>
+      <Header />
       <div className="search__container">
         <form className="search__form">
           <label htmlFor={'pokemonName'} className="screen-reader-only">
