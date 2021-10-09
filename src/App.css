@@ -148,6 +148,8 @@
   justify-content: center;
 
   height: 74px;
+  min-width: 240px;
+
   box-shadow: var(--box-shadow);
 }
 
@@ -156,10 +158,13 @@
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   font-size: var(--font-size-big);
   line-height: var(--line-height-big);
   font-weight: var(--bold-font-weight);
+
+  min-width: 200px;
 
   color: var(--color-grey-dark);
 }
@@ -171,7 +176,9 @@
 .search__container {
   max-width: 500px;
   margin: 40px auto 55px;
+  padding: 0 24px;
 }
+
 .search__form {
   position: relative;
 
@@ -201,6 +208,7 @@
 
   height: 35px;
   width: 100%;
+  min-width: 200px;
 
   padding-left: 36px;
 }
@@ -278,6 +286,10 @@
 
   .card + .card {
     margin-top: 0;
+  }
+
+  .search__container {
+    padding: 0;
   }
 
   .navigation__header {
