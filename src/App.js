@@ -3,6 +3,8 @@ import Bulbasaur from './assets/img/bulbasaur.png';
 import iconHeight from './assets/icons/icon-height.svg';
 import iconWeight from './assets/icons/icon-weight.svg';
 import iconPokeBall from './assets/icons/icon-pokeball.svg';
+import iconGithub from './assets/icons/icon-github.svg';
+import logoPokeapi from './assets/icons/logo-pokeapi.svg';
 
 const pokeTest = [
   {
@@ -112,7 +114,7 @@ function App() {
       <header className="navigation__header">
         <nav>
           <a
-            href="#"
+            href="/"
             className="navigation__logo"
             title="Aún no tengo enlace. ¿Lo necesito?"
           >
@@ -208,6 +210,20 @@ function App() {
           );
         })}
       </section>
+      <footer>
+        <ul className="footer__container">
+          <li className="footer__link">
+            <a href="https://github.com/Leired7/pokedex">
+              <img src={iconGithub} alt="Logo Github" />
+            </a>
+          </li>
+          <li className="footer__link">
+            <a href="https://pokeapi.co/">
+              <img src={logoPokeapi} alt="Logo Poke API" />
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
   );
 }
