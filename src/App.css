@@ -1,4 +1,11 @@
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .section__container {
+  flex-grow: 1;
   padding: 0 24px 0 24px;
 }
 
@@ -46,6 +53,10 @@
   position: relative;
   z-index: 1;
   margin: 0 auto;
+
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
 }
 
 .card__description {
@@ -143,6 +154,8 @@
 }
 
 .navigation__header {
+  flex-shrink: 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,7 +187,9 @@
 }
 
 .search__container {
-  max-width: 500px;
+  flex-shrink: 0;
+
+  width: minmax(200px, 500px);
   margin: 40px auto 55px;
   padding: 0 24px;
 }
@@ -208,13 +223,14 @@
 
   height: 35px;
   width: 100%;
-  min-width: 200px;
 
   padding-left: 36px;
 }
 
 .footer__container {
   position: relative;
+
+  flex-shrink: 0;
 
   display: flex;
   align-items: center;
@@ -264,8 +280,72 @@
   background-color: var(--color-poison);
 }
 
+.background-color-fire {
+  background-color: var(--color-fire);
+}
+
+.background-color-water {
+  background-color: var(--color-water);
+}
+
+.background-color-rock {
+  background-color: var(--color-rock);
+}
+
+.background-color-ghost {
+  background-color: var(--color-ghost);
+}
+
+.background-color-steel {
+  background-color: var(--color-steel);
+}
+
+.background-color-watter {
+  background-color: var(--color-watter);
+}
+.background-color-psychic {
+  background-color: var(--color-psychic);
+}
+
+.background-color-ice {
+  background-color: var(--color-ice);
+}
+
+.background-color-dark {
+  background-color: var(--color-dark);
+}
+.background-color-fairy {
+  background-color: var(--color-fairy);
+}
+
+.background-color-normal {
+  background-color: var(--color-normal);
+}
+
+.background-color-fighting {
+  background-color: var(--color-fighting);
+}
+.background-color-ground {
+  background-color: var(--color-ground);
+}
+
+.background-color-poison {
+  background-color: var(--color-poison);
+}
+
+.background-color-bug {
+  background-color: var(--color-bug);
+}
+.background-color-dragon {
+  background-color: var(--color-dragon);
+}
+
 .background-color-electric {
   background-color: var(--color-electric);
+}
+
+.background-color-flying {
+  background-color: var(--color-flying);
 }
 
 .color-grass {
@@ -286,21 +366,21 @@
   outline: 3px dashed tomato;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .section__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px 24px;
 
     max-width: 990px;
     margin: 0 auto;
 
-    padding: 0;
+    padding: 0 24px;
   }
 
   .card {
-    max-width: 300px;
+    width: 48%;
   }
 
   .card + .card {
@@ -317,5 +397,14 @@
 
   .navigation__logo {
     margin-left: 135px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section__container {
+    padding: 0;
+  }
+  .card {
+    max-width: 300px;
   }
 }

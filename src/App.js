@@ -1,127 +1,50 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import Bulbasaur from './assets/img/bulbasaur.png';
 import iconHeight from './assets/icons/icon-height.svg';
 import iconWeight from './assets/icons/icon-weight.svg';
 import iconPokeBall from './assets/icons/icon-pokeball.svg';
 import iconGithub from './assets/icons/icon-github.svg';
 import logoPokeapi from './assets/icons/logo-pokeapi.svg';
 
-const pokeTest = [
-  {
-    height: 7,
-    id: 1,
-    name: 'bulbasaur',
-    order: 1,
-    types: [
-      {
-        slot: 1,
-        type: { name: 'grass', url: 'https://pokeapi.co/api/v2/type/12/' },
-      },
-      {
-        slot: 2,
-        type: { name: 'poison', url: 'https://pokeapi.co/api/v2/type/4/' },
-      },
-    ],
-    weight: 69,
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, consequatur ipsa natus omnis expedita praesentium facere reiciendis ipsam vitae alias illo dolorum fuga, nam veniam quaerat et voluptas necessitatibus laudantium.',
-  },
-  {
-    height: 4,
-    id: 25,
-    name: 'pikachu',
-    types: [
-      {
-        slot: 1,
-        type: { name: 'electric', url: 'https://pokeapi.co/api/v2/type/13/' },
-      },
-    ],
-    weight: 60,
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, consequatur ipsa natus omnis expedita praesentium facere reiciendis ipsam vitae alias illo dolorum fuga, nam veniam quaerat et voluptas necessitatibus laudantium.',
-  },
-  {
-    height: 7,
-    id: 1,
-    name: 'bulbasaur',
-    order: 1,
-    types: [
-      {
-        slot: 1,
-        type: { name: 'grass', url: 'https://pokeapi.co/api/v2/type/12/' },
-      },
-      {
-        slot: 2,
-        type: { name: 'poison', url: 'https://pokeapi.co/api/v2/type/4/' },
-      },
-    ],
-    weight: 69,
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, consequatur ipsa natus omnis expedita praesentium facere reiciendis ipsam vitae alias illo dolorum fuga, nam veniam quaerat et voluptas necessitatibus laudantium.',
-  },
-  {
-    height: 4,
-    id: 25,
-    name: 'pikachu',
-    types: [
-      {
-        slot: 1,
-        type: { name: 'electric', url: 'https://pokeapi.co/api/v2/type/13/' },
-      },
-    ],
-    weight: 60,
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, consequatur ipsa natus omnis expedita praesentium facere reiciendis ipsam vitae alias illo dolorum fuga, nam veniam quaerat et voluptas necessitatibus laudantium.',
-  },
-  {
-    height: 7,
-    id: 1,
-    name: 'bulbasaur',
-    order: 1,
-    types: [
-      {
-        slot: 1,
-        type: { name: 'grass', url: 'https://pokeapi.co/api/v2/type/12/' },
-      },
-      {
-        slot: 2,
-        type: { name: 'poison', url: 'https://pokeapi.co/api/v2/type/4/' },
-      },
-    ],
-    weight: 69,
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, consequatur ipsa natus omnis expedita praesentium facere reiciendis ipsam vitae alias illo dolorum fuga, nam veniam quaerat et voluptas necessitatibus laudantium.',
-  },
-  {
-    height: 4,
-    id: 25,
-    name: 'pikachu',
-    types: [
-      {
-        slot: 1,
-        type: { name: 'electric', url: 'https://pokeapi.co/api/v2/type/13/' },
-      },
-    ],
-    weight: 60,
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, consequatur ipsa natus omnis expedita praesentium facere reiciendis ipsam vitae alias illo dolorum fuga, nam veniam quaerat et voluptas necessitatibus laudantium.',
-  },
-];
-
 function App() {
+  const [pokeCards, setPokeCards] = useState([]);
   const [filter, setFilter] = useState('');
 
-  const filteredPokemon = pokeTest.filter((item) => {
-    return item.name.toLowerCase().includes(filter);
-  });
+  const filteredPokemon =
+    pokeCards.length > 0
+      ? pokeCards.filter((item) => {
+          return item.name.toLowerCase().includes(filter);
+        })
+      : [];
+
+  useEffect(() => {
+    async function getPokecards() {
+      const pokeApiInfo = await fetch('https://pokeapi.co/api/v2/pokemon').then(
+        (res) => res.json()
+      );
+
+      const pokemonUrls = pokeApiInfo.results.map((item) => item.url);
+
+      const pokeCardFetched = await Promise.all(
+        pokemonUrls.map(async (url) => {
+          const resp = await fetch(url);
+          return resp.json();
+        })
+      );
+
+      console.log(pokeCardFetched[3]);
+      setPokeCards(pokeCardFetched);
+    }
+
+    getPokecards();
+  }, []);
 
   const handleSearch = (e) => {
     setFilter(e.target.value);
   };
 
   return (
-    <div className="App">
+    <main className="App">
       <header className="navigation__header">
         <nav>
           <a
@@ -180,7 +103,7 @@ function App() {
                 <p className="card__id color-white">#{pokeitem.id}</p>
               </header>
               <img
-                src={Bulbasaur}
+                src={`${pokeitem.sprites.other.dream_world.front_default}`}
                 alt={`${pokeitem.name}`}
                 className="card__image"
               />
@@ -242,7 +165,7 @@ function App() {
           </li>
         </ul>
       </footer>
-    </div>
+    </main>
   );
 }
 
