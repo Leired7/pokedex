@@ -64,7 +64,7 @@ function App() {
           <label htmlFor={'pokemonName'} className="screen-reader-only">
             Search pokemon card
           </label>
-          <div class="search__icon">
+          <div className="search__icon">
             <svg
               width="16"
               height="16"
