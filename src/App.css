@@ -10,6 +10,7 @@
   justify-content: space-between;
 
   width: 100%;
+  min-width: 210px;
   min-height: 400px;
   max-height: 400px;
 
@@ -17,6 +18,10 @@
 
   border-radius: var(--space-small);
   box-shadow: var(--box-shadow);
+}
+
+.card + .card {
+  margin-top: 24px;
 }
 
 .card__header {
@@ -256,6 +261,11 @@
 
 @media screen and (min-width: 768px) {
   .section__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 24px;
+
     max-width: 990px;
     margin: 0 auto;
 
@@ -264,6 +274,10 @@
 
   .card {
     max-width: 300px;
+  }
+
+  .card + .card {
+    margin-top: 0;
   }
 
   .navigation__header {

@@ -38,6 +38,72 @@ const pokeTest = [
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, consequatur ipsa natus omnis expedita praesentium facere reiciendis ipsam vitae alias illo dolorum fuga, nam veniam quaerat et voluptas necessitatibus laudantium.',
   },
+  {
+    height: 7,
+    id: 1,
+    name: 'bulbasaur',
+    order: 1,
+    types: [
+      {
+        slot: 1,
+        type: { name: 'grass', url: 'https://pokeapi.co/api/v2/type/12/' },
+      },
+      {
+        slot: 2,
+        type: { name: 'poison', url: 'https://pokeapi.co/api/v2/type/4/' },
+      },
+    ],
+    weight: 69,
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, consequatur ipsa natus omnis expedita praesentium facere reiciendis ipsam vitae alias illo dolorum fuga, nam veniam quaerat et voluptas necessitatibus laudantium.',
+  },
+  {
+    height: 4,
+    id: 25,
+    name: 'pikachu',
+    types: [
+      {
+        slot: 1,
+        type: { name: 'electric', url: 'https://pokeapi.co/api/v2/type/13/' },
+      },
+    ],
+    weight: 60,
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, consequatur ipsa natus omnis expedita praesentium facere reiciendis ipsam vitae alias illo dolorum fuga, nam veniam quaerat et voluptas necessitatibus laudantium.',
+  },
+  {
+    height: 7,
+    id: 1,
+    name: 'bulbasaur',
+    order: 1,
+    types: [
+      {
+        slot: 1,
+        type: { name: 'grass', url: 'https://pokeapi.co/api/v2/type/12/' },
+      },
+      {
+        slot: 2,
+        type: { name: 'poison', url: 'https://pokeapi.co/api/v2/type/4/' },
+      },
+    ],
+    weight: 69,
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, consequatur ipsa natus omnis expedita praesentium facere reiciendis ipsam vitae alias illo dolorum fuga, nam veniam quaerat et voluptas necessitatibus laudantium.',
+  },
+  {
+    height: 4,
+    id: 25,
+    name: 'pikachu',
+    types: [
+      {
+        slot: 1,
+        type: { name: 'electric', url: 'https://pokeapi.co/api/v2/type/13/' },
+      },
+    ],
+    weight: 60,
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, consequatur ipsa natus omnis expedita praesentium facere reiciendis ipsam vitae alias illo dolorum fuga, nam veniam quaerat et voluptas necessitatibus laudantium.',
+  },
 ];
 
 function App() {
