@@ -372,8 +372,8 @@ main {
   .section__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 20px 44px;
+    justify-content: space-between;
+    gap: 20px 24px;
 
     max-width: 990px;
     margin: 0 auto;
@@ -389,10 +389,6 @@ main {
     margin-top: 0;
   }
 
-  .search__container {
-    padding: 0;
-  }
-
   .navigation__header {
     justify-content: flex-start;
   }
@@ -404,7 +400,9 @@ main {
 
 @media screen and (min-width: 992px) {
   .section__container {
-    padding: 0;
+    padding: 0 24px;
+    gap: 20px 20px;
+    justify-content: flex-start;
   }
   .card {
     max-width: 300px;
