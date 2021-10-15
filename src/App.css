@@ -375,6 +375,7 @@ main {
     justify-content: space-between;
     gap: 20px 24px;
 
+    min-width: 700px;
     max-width: 990px;
     margin: 0 auto;
 
