@@ -1,0 +1,32 @@
+.navigation__header {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 74px;
+  min-width: 240px;
+
+  box-shadow: var(--box-shadow);
+}
+
+.navigation__logo {
+  /* Reset <a> styles */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--font-size-big);
+  line-height: var(--line-height-big);
+  font-weight: var(--bold-font-weight);
+
+  min-width: 200px;
+
+  color: var(--color-grey-dark);
+}
+
+.icon-pokeball {
+  margin-right: var(--space-base);
+}

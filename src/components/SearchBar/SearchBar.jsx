@@ -1,3 +1,5 @@
+import './style.css';
+
 export const SearchBar = ({ filter, onChangeSetFilter }) => {
   return (
     <div className="search__container">

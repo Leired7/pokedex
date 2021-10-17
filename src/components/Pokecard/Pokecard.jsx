@@ -1,3 +1,5 @@
+import './style.css';
+
 export const PokeCard = ({ filteredPokemon, iconHeight, iconWeight }) => {
   return (
     <>

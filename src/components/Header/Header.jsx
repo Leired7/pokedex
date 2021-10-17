@@ -1,3 +1,4 @@
+import './style.css';
 import iconPokeBall from '../../assets/icons/icon-pokeball.svg';
 
 export const Header = () => {
