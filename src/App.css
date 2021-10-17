@@ -401,3 +401,14 @@ main {
     max-width: 300px;
   }
 }
+
+@media screen and (min-width: 992px) {
+  .section__container {
+    padding: 0 24px;
+    gap: 20px 20px;
+    justify-content: flex-start;
+  }
+  .card {
+    max-width: 300px;
+  }
+}
