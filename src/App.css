@@ -9,6 +9,13 @@ main {
   padding: 0 24px 0 24px;
 }
 
+.loading-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .tag {
   font-size: var(--font-size-tiny);
   line-height: var(--line-height-tiny);
