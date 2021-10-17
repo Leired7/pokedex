@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 import Bulbasaur from './assets/img/bulbasaur.png';
 import iconHeight from './assets/icons/icon-height.svg';
@@ -109,6 +110,16 @@ const pokeTest = [
 ];
 
 function App() {
+  const [filter, setFilter] = useState('');
+
+  const filteredPokemon = pokeTest.filter((item) => {
+    return item.name.toLowerCase().includes(filter);
+  });
+
+  const handleSearch = (e) => {
+    setFilter(e.target.value);
+  };
+
   return (
     <div className="App">
       <header className="navigation__header">
@@ -148,11 +159,17 @@ function App() {
               />
             </svg>
           </div>
-          <input id="pokemonName" type="text" className="search__input" />
+          <input
+            id="pokemonName"
+            type="text"
+            className="search__input"
+            value={filter}
+            onChange={handleSearch}
+          />
         </form>
       </div>
       <section className="section__container">
-        {pokeTest.map((pokeitem, index) => {
+        {filteredPokemon.map((pokeitem, index) => {
           return (
             <article
               className={`card background-color-${pokeitem.types[0].type.name}`}
@@ -169,10 +186,11 @@ function App() {
               />
               <div className="card__description">
                 <ul className="card__list">
-                  {pokeitem.types.map((pokeTag) => {
+                  {pokeitem.types.map((pokeTag, index) => {
                     return (
                       <li
                         className={`card-tag tag background-color-${pokeTag.type.name}`}
+                        key={index}
                       >
                         {pokeTag.type.name}
                       </li>
